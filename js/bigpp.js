@@ -102,7 +102,8 @@ function getSongs(callback) {
         var chars = song.split("");
         chars.sort();
         songChars = chars.join();
-        var pp = parseFloat($(this).find("th.score span.scoreTop.ppValue").text());
+        var weightedPP = $(this).find("th.score span.scoreTop.ppWeightedValue").text();
+        var pp = parseFloat(weightedPP.substring(1));
 
         var songObj = {
           "song": songTitle,
@@ -150,6 +151,15 @@ function organize() {
 
     if (diff) {
       diff = diff.toFixed(2);
+    }
+
+    if (pp) {
+      pp = parseFloat(pp); 
+      pp = pp.toFixed(2);
+    }
+
+    if (diff < 0) {
+      diff = "0.00";
     }
 
     var songObj = {
