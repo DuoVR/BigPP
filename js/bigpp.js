@@ -199,7 +199,7 @@ function readData(allText) {
     song = chars.join();
     var songObject = {
       "song": songTitle,
-      "pp": parseFloat(row[1])
+      "pp": parseFloat(row[4])
     }
     songs[song] = songObject
     songList.push(song);
