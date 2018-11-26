@@ -11,6 +11,7 @@ var needPlayer = true;
 var count = 0;
 
 var playerIdPrefix = 'https://scoresaber.com/u/';
+// this is just to test stuff
 
 $(document).ready(function() {
   $("#loading").hide();
@@ -154,7 +155,7 @@ function organize() {
     }
 
     if (pp) {
-      pp = parseFloat(pp); 
+      pp = parseFloat(pp);
       pp = pp.toFixed(2);
     }
 
