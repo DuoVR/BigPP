@@ -11,7 +11,6 @@ var needPlayer = true;
 var count = 0;
 
 var playerIdPrefix = 'https://scoresaber.com/u/';
-// this is just to test stuff
 
 $(document).ready(function() {
   $("#loading").hide();
